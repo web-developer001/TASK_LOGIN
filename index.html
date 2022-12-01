@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- BT min css -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./style.css" />
+    <title>lesson-9</title>
+</head>
+
+<body>
+
+    <div class="toastify"></div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">O'zgartirish:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" id="addedit">
+                        <label for="editTitle" class="w-100 my-3">
+                            <input type="text" class="form-control p-3" placeholder="Enter task title" id="editTitle" />
+                        </label>
+
+                        <label for="editDesc" class="w-100 my-3">
+                            <input type="text" class="form-control p-3" placeholder="Enter task description"
+                                id="editDesc" />
+                        </label>
+
+                        <label for="editDate" class="w-100 my-3">
+                            <input type="date" class="form-control p-3" id="editDate" />
+                        </label>
+
+                        <button type="submit" class="btn btn-success w-100 my-3 p-3">
+                            ADD TASK
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- header start -->
+    <header class="bg-success">
+        <div class="container">
+            <nav class="nav p-3 bg-success d-flex justify-content-between w-100">
+                <h3 class="nav-logo text-white">TASK MANAGER APP</h3>
+                <div class="user-info d-flex  align-items-center gap-5">
+                    <strong class="p-3 bg-warning rounded-pill" id="userLogin">User name</strong>
+                    <span class="log-out text-white fs-3 " id="logout"><i class="bi bi-box-arrow-right"></i></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- main start -->
+    <main>
+        <section id="main">
+            <div class="container">
+                <div class="row my-3">
+                    <div class="col-md-4 p-3 shadow">
+                        <h3 class="text-danger text-center">Add new task</h3>
+                        <form action="#" id="add">
+                            <label for="taskTitle" class="w-100 my-3">
+                                <input type="text" class="form-control p-3" placeholder="Enter task title"
+                                    id="taskTitle" />
+                            </label>
+
+                            <label for="taskDesc" class="w-100 my-3">
+                                <input type="text" class="form-control p-3" placeholder="Enter task description"
+                                    id="taskDesc" />
+                            </label>
+
+                            <label for="taskDate" class="w-100 my-3">
+                                <input type="date" class="form-control p-3" id="taskDate" />
+                            </label>
+
+                            <button type="submit" class="btn btn-success w-100 my-3 p-3">
+                                ADD TASK
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-md-8 p-3 shadow">
+                        <h3 class="text-danger text-center">Latest tasks list</h3>
+                        <table class="table table-striped table-hover table-bordered mt-4">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Task title</th>
+                                    <th>Task description</th>
+                                    <th>Task dedline</th>
+                                    <th>Edit</th>
+                                    <th>Remove</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="data"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- main end -->
+</body>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./scripts/utils.js"></script>
+<script src="./index.js"></script>
+
+</html>
